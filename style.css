@@ -49,24 +49,24 @@ header .navigation-bar ul li a {
   text-decoration: none;
   color: #00308f;
   font-size: 22px;
-  transition: color 0.3s;
+  transition: color 0.3s, top 0.3s;
   position: relative;
-  top: -40px; /* Adjust this value to control the upward shift */
+  top: -40px;
 }
 
 header .navigation-bar ul li a:hover {
-  color: #f4310f; /* Tomato color */
+  color: #f4310f;
   text-decoration: underline;
 }
 
-/* Style for active link */
+/* Active Link */
 .active {
-  color: #f4310f;  /* Highlight color */
+  color: #f4310f;
   font-weight: bold;
   text-decoration: underline;
 }
 
-/* for smooth scrolling */
+/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
@@ -75,25 +75,21 @@ html {
 .main-content {
   display: flex;
   align-items: center;
-
   margin-top: 5rem;
 }
 
-.main-content-wrapper {
+.main-content-wrapper,
+.columns-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-/* Wrapper for columns with space between */
 .columns-wrapper {
-  display: flex;
-  justify-content: space-between; /* Align columns side by side */
-  width: 100%;
+  justify-content: space-between;
 }
 
 .wave-div {
-  width: 100%;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -113,58 +109,40 @@ html {
   line-height: 2;
 }
 
-.col-left h1,
-.col-left p {
-  margin-top: 0;
-  margin-bottom: 20px;
+.col-left h1, .col-left p {
+  margin: 0 0 20px 0;
 }
 
 .wave-text {
   display: inline-block;
-  width: 100%;
   text-align: center;
-  margin-bottom: 20px;
   font-size: 40px;
   font-family: "Dancing Script", cursive;
   font-weight: bold;
   color: #f33c1c;
-  transition: color 0.3s ease, transform 0.3s ease; /* Added transition for color and transform */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect to highlight the text */
 .wave-text:hover {
-  color: #ff5722; /* Change text color on hover */
-  transform: scale(1.05); /* Slightly enlarge the text when hovered */
+  color: #ff5722;
+  transform: scale(1.05);
 }
-/* Targetting the hand emoji */
+
 .wave-hand {
   display: inline-block;
   animation: wave 1s infinite;
-  transition: transform 0.3s ease, color 0.3s ease; /* Added transition to wave-hand */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect to change color of the wave emoji */
 .wave-hand:hover {
-  color: #ff5722; /* Change color of hand emoji on hover */
-  transform: scale(1.2); /* Slightly enlarge the hand emoji on hover */
+  color: #ff5722;
+  transform: scale(1.2);
 }
 
 @keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(20deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-20deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+  0%, 50%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  75% { transform: rotate(-20deg); }
 }
 
 .col-right {
@@ -187,14 +165,13 @@ html {
 /* Contact Form Section */
 #contact-form-section {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 50px 0;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-#contact-form-section .contact-left,
+#contact-form-section .contact-left, 
 #contact-form-section .form-container {
   flex: 1;
 }
@@ -215,8 +192,8 @@ html {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribute space between inputs and button */
-  height: 400px; /* Set a fixed height for the form */
+  justify-content: space-between;
+  height: 400px;
 }
 
 #contact-form-section form {
@@ -248,11 +225,10 @@ html {
 
 #contact-form-section form input::placeholder,
 #contact-form-section form textarea::placeholder {
-  color: #811e81; /* Replace this with the color of your choice */
-  opacity: 1; /* Ensures the placeholder text is fully visible */
+  color: #811e81;
+  opacity: 1;
   font-size: 18px;
 }
-
 
 #contact-form-section form button {
   background-color: #00308f;
@@ -306,8 +282,6 @@ footer p {
 }
 
 /* Responsive Design */
-
-/* For screens smaller than 992px (Tablets) */
 @media (max-width: 992px) {
   .container {
     width: 90%;
@@ -318,8 +292,7 @@ footer p {
     align-items: center;
   }
 
-  .col-left,
-  .col-right {
+  .col-left, .col-right {
     width: 100%;
     text-align: center;
   }
@@ -345,7 +318,6 @@ footer p {
   }
 }
 
-/* For screens smaller than 768px (Large Smartphones) */
 @media (max-width: 768px) {
   header .navigation-bar ul {
     flex-direction: column;
@@ -370,7 +342,6 @@ footer p {
   }
 }
 
-/* For screens smaller than 576px (Small Smartphones) */
 @media (max-width: 576px) {
   .container {
     width: 95%;
@@ -414,98 +385,5 @@ footer p {
   footer .social-media img {
     width: 25px;
     height: 25px;
-  }
-}
-
-/* Specific Styles for Smartphones */
-@media (max-width: 576px) {
-  /* General Container */
-  .container {
-    width: 100%; /* Utilize full width */
-    padding: 0 10px; /* Add some padding for breathing room */
-  }
-
-  /* Navigation Bar */
-  @media (max-width: 576px) {
-    header .navigation-bar ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px; /* Adequate spacing */
-    }
-
-    header .navigation-bar ul li a {
-        font-size: 16px;
-        top: 0; /* Reset positioning */
-        padding: 5px 10px; /* Add padding for better touch targets */
-    }
-}
-
-  /* Main Content */
-  .wave-text {
-        font-size: 18px; /* Smaller font */
-        margin-bottom: 15px; /* Slightly increased spacing */
-        line-height: 1.4; /* Better readability */
-    }
-
-  .col-left h1 {
-    font-size: 18px; /* Reduce heading size */
-  }
-
-  .col-left p {
-    font-size: 14px; /* Reduce paragraph font size */
-    line-height: 1.5; /* Tighter line spacing */
-  }
-
-  .col-right img {
-    max-width: 90%; /* Ensure image doesn't overflow */
-    margin: 20px auto; /* Center image with spacing */
-  }
-
-  /* Contact Section */
-  #contact-form-section {
-    padding: 20px 10px; /* Reduce padding for compact layout */
-    flex-direction: column; /* Stack form and image */
-    gap: 20px;
-  }
-
-  #contact-form-section .contact-left img {
-    width: 100%; /* Image takes full width */
-    max-width: 300px; /* Limit the size */
-    margin: 0 auto; /* Center align */
-  }
-
-  #contact-form-section .form-container {
-    max-width: 100%; /* Expand form width */
-    padding: 10px; /* Adjust padding */
-  }
-
-  #contact-form-section .form-container h1 {
-    font-size: 22px; /* Adjust font size */
-    margin-bottom: 10px;
-  }
-
-  #contact-form-section form input,
-  #contact-form-section form textarea {
-    font-size: 14px; /* Smaller input text */
-    padding: 8px; /* Compact inputs */
-  }
-
-  #contact-form-section form button {
-    font-size: 16px; /* Smaller button text */
-    padding: 8px 16px; /* Compact button */
-  }
-
-  /* Footer */
-  footer {
-    padding: 10px; /* Compact padding */
-  }
-
-  footer .social-media img {
-    width: 25px; /* Smaller icons */
-    height: 25px;
-  }
-
-  footer p {
-    font-size: 14px; /* Smaller text */
   }
 }
