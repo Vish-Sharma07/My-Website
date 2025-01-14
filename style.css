@@ -417,3 +417,91 @@ footer p {
   }
 }
 
+/* Specific Styles for Smartphones */
+@media (max-width: 576px) {
+  /* General Container */
+  .container {
+    width: 100%; /* Utilize full width */
+    padding: 0 10px; /* Add some padding for breathing room */
+  }
+
+  /* Navigation Bar */
+  header .navigation-bar ul {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center align items */
+    gap: 1rem; /* Add spacing between links */
+  }
+
+  header .navigation-bar ul li a {
+    font-size: 16px; /* Slightly smaller font size */
+    top: 0; /* Reset any upward positioning */
+  }
+
+  /* Main Content */
+  .wave-text {
+    font-size: 20px; /* Adjust font size for better readability */
+    margin-bottom: 10px;
+  }
+
+  .col-left h1 {
+    font-size: 18px; /* Reduce heading size */
+  }
+
+  .col-left p {
+    font-size: 14px; /* Reduce paragraph font size */
+    line-height: 1.5; /* Tighter line spacing */
+  }
+
+  .col-right img {
+    max-width: 90%; /* Ensure image doesn't overflow */
+    margin: 20px auto; /* Center image with spacing */
+  }
+
+  /* Contact Section */
+  #contact-form-section {
+    padding: 20px 10px; /* Reduce padding for compact layout */
+    flex-direction: column; /* Stack form and image */
+    gap: 20px;
+  }
+
+  #contact-form-section .contact-left img {
+    width: 100%; /* Image takes full width */
+    max-width: 300px; /* Limit the size */
+    margin: 0 auto; /* Center align */
+  }
+
+  #contact-form-section .form-container {
+    max-width: 100%; /* Expand form width */
+    padding: 10px; /* Adjust padding */
+  }
+
+  #contact-form-section .form-container h1 {
+    font-size: 22px; /* Adjust font size */
+    margin-bottom: 10px;
+  }
+
+  #contact-form-section form input,
+  #contact-form-section form textarea {
+    font-size: 14px; /* Smaller input text */
+    padding: 8px; /* Compact inputs */
+  }
+
+  #contact-form-section form button {
+    font-size: 16px; /* Smaller button text */
+    padding: 8px 16px; /* Compact button */
+  }
+
+  /* Footer */
+  footer {
+    padding: 10px; /* Compact padding */
+  }
+
+  footer .social-media img {
+    width: 25px; /* Smaller icons */
+    height: 25px;
+  }
+
+  footer p {
+    font-size: 14px; /* Smaller text */
+  }
+}
