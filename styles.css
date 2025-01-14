@@ -1,0 +1,547 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-image: url("assets/img/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+  
+
+/* Container Styles */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+  padding: 10px 0;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-family: "Dancing Script", cursive;
+  color: rgb(146, 56, 146);
+}
+
+header .navigation-bar ul {
+  list-style: none;
+  margin-top: 0;
+  display: flex;
+  gap: 3rem;
+  text-align: center;
+  justify-content: flex-end;
+}
+
+header .navigation-bar ul li {
+  margin-left: 20px;
+}
+
+header .navigation-bar ul li a {
+  text-decoration: none;
+  color: #00308f;
+  font-size: 22px;
+  transition: color 0.3s;
+  position: relative;
+  top: -40px; /* Adjust this value to control the upward shift */
+}
+
+header .navigation-bar ul li a:hover {
+  color: #f4310f; /* Tomato color */
+  text-decoration: underline;
+}
+
+/* Style for active link */
+.active {
+  color: #f4310f;  /* Highlight color */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* for smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Education Section */
+#education {
+  padding: 50px 0;
+  color: #333;
+}
+
+
+.image-container {
+  position: relative;
+  display: inline-block; /* Ensures images stay together */
+}
+
+.base-image {
+  width: 100%; /* Adjust to fit the container */
+  height: auto;
+}
+
+.overlay-image {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  width: 100px; /* Adjust size of overlay image */
+  height: auto;
+  z-index: 10;
+  animation: wave 1.5s infinite;
+  transform-origin: bottom right;
+}
+
+.education-image img {
+  display:flex;
+  width: 500px;
+  justify-content: left;
+}
+
+.education-quote {
+  background-color: transparent;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  margin-top: 50px;
+}
+
+.education-quote blockquote {
+  font-size: 24px;
+  font-style: italic;
+  color: #9575DE;
+  margin: 0;
+  padding: 0;
+  font-weight: bolder;
+}
+
+.education-quote blockquote p {
+  margin-bottom: 20px;
+}
+
+/* Education Quote Section */
+.education-quote footer {
+  font-size: 18px;
+  font-weight: bold;
+  color:#EB3678;
+}
+
+/* Education Image and Quote Content */
+.education-image-quote-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* for waving girl */
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* Horizontal Rule after Education Section */
+.education-hr {
+  border: 0;
+  width: 70%; /* 70% width for centering */
+  border-top: 5px solid #fa7178; /* Color of the line */
+  border-radius: 5px; /* Slightly reduced border-radius for a subtler curve */
+  margin: 40px auto; /* Add spacing above and below */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow for more depth */
+}
+
+/* Education Journey Section */
+#education-journey {
+  padding: 50px 0;
+  
+  text-align: center;
+}
+
+/* Education Journey Heading */
+#education-journey h2 {
+  font-size: 45px;
+  font-size: 32px;
+  color: #00308f;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  margin: 40px 0 20px; /* Add spacing above and below */
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scaling */
+}
+
+#education-journey h2:hover {
+  color: #f4310f; /* Change color on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Timeline Container */
+.education-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 0; 
+ opacity: 0; 
+  transform: translateY(50px); /*Initially shifted down */
+  transition: opacity 1s ease, transform 1s ease;/* Smooth transition */
+  animation: fadeInUp 1s ease-out forwards;/* Fade in and slide up */
+}
+
+.timeline-item {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+}
+
+.education-timeline.visible {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Reset position */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Slide from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Reset to original position */
+  }
+}
+
+/* Vertical Line in the center */
+.vertical-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 7px;
+  background-color:  #663dff;
+  background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+  z-index: 1;
+}
+
+/* Education Items (Left and Right) */
+.education-item {
+  position: relative;
+  width: 49%; /* Keeping width same for all sections */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  text-align: left;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(50px); /* Initially shifted down */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transition */
+}
+
+/* Left Side Item (First Section) */
+.education-item.left {
+  left: -10%; /* Left side of the vertical line */
+  margin-left: 20px;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+/* Right Side Item (Second Section) */
+.education-item.right {
+  left: 59%; /* Right side of the vertical line */
+  margin-right: 20px;
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* Left Side Item (Third Section) */
+.education-item.third-left {
+  left: -10%; /* Left side of the vertical line */
+  margin-left: 20px;
+  text-align: left;
+  animation: slideInLeft 0.6s ease-out;
+  margin-top: 4%; /* Adjust this if you want a better gap between sections */
+}
+
+/* Content Inside Each Education Item */
+.education-content {
+  display: flex;
+  flex-direction: column; /* Set to column layout */
+  align-items: flex-start; /* Align content to the left */
+  gap: 2px;
+  max-width: 900px; /* Adjust the width as needed */
+  margin: 0 auto;
+  padding: 10px; /* Adjust padding if necessary */
+}
+
+.education-content h3 {
+  font-size: 24px;
+  color: #00308f;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.education-content p {
+  font-size: 30px;
+  color: #d62626;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.education-item.left {
+  left: -10%;
+  margin-left: 20px;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+/* Animations for Sliding */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Circle for marking each section */
+.education-circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #524292;
+  border-radius: 50%;
+  left: 50.4%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.education-circle.visible {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* Circle Positions */
+.education-circle.one {
+  top: 12%; /* Position of circle for first section */
+  
+}
+
+.education-circle.two {
+  top: 46%; /* Position of circle for second section */
+}
+
+.education-circle.three {
+  top: 74%; /* Position of circle for third section */
+}
+
+
+/* Online Credentials */
+
+#online-credentials {
+  text-align: center; /* Center-aligns text within the section */
+  margin-bottom: 20px; /* Adds space below the heading */
+}
+
+#online-credentials h2 {
+  margin-bottom: 20px; /* Creates space between the heading and the images */
+  font-size: 2rem; /* Optional: Adjust the font size for better visibility */
+  font-weight: bold; /* Optional: Make the heading bold */
+  color: #00308f;
+}
+
+
+#online-credentials ul {
+  display: flex; /* Arrange items in a row */
+  justify-content: space-around; /* Distribute space evenly */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow wrapping if necessary */
+  padding: 0;
+  list-style: none; /* Remove bullet points */
+}
+
+#online-credentials ul li {
+  margin: 10px; /* Add spacing between items */
+}
+
+#online-credentials ul li img {
+  width: 390px; /* Set a uniform width for all images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visuals */
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+#online-credentials ul li img:hover {
+  transform: scale(1.1); /* Enlarge image slightly on hover */
+}
+
+#online-credentials ul li p {
+  margin-top: 8px; /* Add space above the text */
+  font-size: 1rem; /* Adjust font size */
+  color: #333; /* Text color */
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 50px 0;
+  font-size: 24px;
+}
+
+#contact-form-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#contact-form-section .contact-left,
+#contact-form-section .form-container {
+  flex: 1;
+}
+
+#contact-form-section .contact-left img {
+  width: 100%;
+  max-width: 400px;
+  margin-left: 60px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#contact-form-section .form-container {
+  max-width: 45%;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between inputs and button */
+  height: 400px; /* Set a fixed height for the form */
+}
+
+#contact-form-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#contact-form-section .form-container h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#contact-form-section form .form-group {
+  margin-bottom: 20px;
+}
+
+#contact-form-section form input,
+#contact-form-section form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+#contact-form-section form input::placeholder,
+#contact-form-section form textarea::placeholder {
+  color: #811e81; /* Replace this with the color of your choice */
+  opacity: 1; /* Ensures the placeholder text is fully visible */
+  font-size: 18px;
+}
+
+
+#contact-form-section form button {
+  background-color: #00308f;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  align-self: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact-form-section form button:hover {
+  background-color: #524292;
+}
+
+#contact-form-section form .icon {
+  margin-left: 10px;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: transparent;
+}
+
+footer .social-media {
+  margin-bottom: 10px;
+}
+
+footer .social-media a {
+  margin: 0 15px;
+}
+
+footer .social-media img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+footer .social-media img:hover {
+  transform: scale(1.2);
+}
+
+footer p {
+  font-size: 20px;
+  color: #f4310f;
+}
+

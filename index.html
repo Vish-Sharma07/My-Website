@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vishakha Sharma's portfolio - Frontend Developer"
+    />
+    <meta name="author" content="Vishakha Sharma" />
+    <title>Vishakha-Sharma-Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/img/logo.jpeg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="portfolio-main">
+      <!-- Header -->
+      <header>
+        <div class="container">
+          <nav>
+            <div class="logo">
+              <h1>Vishakha</h1>
+            </div>
+            <div class="navigation-bar">
+              <ul>
+                <li>
+                  <a href="#home" class="nav-link" id="home-link">Home</a>
+                </li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li>
+                  <a
+                    href="https://linkedin.com/in/vishakha-sharma-1ba079210/"
+                    class="nav-link"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <div id="home" class="main-content">
+        <div class="container">
+          <div class="main-content-wrapper">
+            <!-- Separate div for the span (waving hand) -->
+            <div class="wave-div">
+              <span class="wave-text"
+                >Hi <span class="wave-hand">👋</span>, I'm Vishakha Sharma</span
+              >
+            </div>
+
+            <!-- Left column for text (h1 and p) -->
+            <div class="columns-wrapper">
+              <div class="col-left">
+                <h1>Student | Frontend Developer</h1>
+                <p>
+                  "Hello! I'm a passionate student and aspiring Frontend
+                  Developer with skills in HTML, CSS, and JavaScript. I enjoy
+                  creating user-friendly, visually appealing web interfaces.
+                  Focused on continuous learning, I'm eager to work on
+                  challenging projects, enhance my skills, and contribute to
+                  impactful solutions in the tech world."
+                </p>
+              </div>
+
+              <!-- Right column for image -->
+              <div class="col-right">
+                <img src="assets/img/coder.png" alt="Display image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add <hr> here -->
+      <br />
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <p>Let's grow together and chase our dreams❤️. Connect with me!</p>
+      </section>
+
+      <!-- Contact Form and Image Section -->
+      <section id="contact-form-section">
+        <div class="contact-left">
+          <img src="assets/img/left-img.jpeg" alt="Left Image" />
+        </div>
+        <div class="form-container">
+          <h1>Get in Touch</h1>
+
+          <form method="POST" action="https://formspree.io/f/xjkklwel">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                placeholder="Type your Message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">
+              Send
+              <span class="icon">🚀</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="social-media">
+          <a
+            href="https://github.com/Vish-Sharma07"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Github Profile"
+          >
+            <img
+              src="assets/img/github-icon.png"
+              alt="GitHub Profile"
+            />
+          </a>
+          <a
+            href="https://linkedin.com/in/vishakha-sharma-1ba079210/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+          >
+            <img src="assets/img/linkedin-icon.jpeg" alt="LinkedIn Profile" />
+          </a>
+        </div>
+        <p>© 2024 Vishakha Sharma. All rights reserved.</p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

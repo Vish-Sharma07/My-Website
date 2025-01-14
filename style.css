@@ -1,0 +1,309 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-image: url("assets/img/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+/* Container Styles */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+  padding: 10px 0;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-family: "Dancing Script", cursive;
+  color: rgb(146, 56, 146);
+}
+
+header .navigation-bar ul {
+  list-style: none;
+  margin-top: 0;
+  display: flex;
+  gap: 3rem;
+  text-align: center;
+  justify-content: flex-end;
+}
+
+header .navigation-bar ul li {
+  margin-left: 20px;
+}
+
+header .navigation-bar ul li a {
+  text-decoration: none;
+  color: #00308f;
+  font-size: 22px;
+  transition: color 0.3s;
+  position: relative;
+  top: -40px; /* Adjust this value to control the upward shift */
+}
+
+header .navigation-bar ul li a:hover {
+  color: #f4310f; /* Tomato color */
+  text-decoration: underline;
+}
+
+/* Style for active link */
+.active {
+  color: #f4310f;  /* Highlight color */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* for smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  align-items: center;
+
+  margin-top: 5rem;
+}
+
+.main-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Wrapper for columns with space between */
+.columns-wrapper {
+  display: flex;
+  justify-content: space-between; /* Align columns side by side */
+  width: 100%;
+}
+
+.wave-div {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.col-left {
+  width: 60%;
+  text-align: left;
+}
+
+.main-content .col-left p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.main-content .col-left h1 {
+  color: #811e81;
+  line-height: 2;
+}
+
+.col-left h1,
+.col-left p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.wave-text {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  color: #f33c1c;
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transition for color and transform */
+}
+
+/* Hover effect to highlight the text */
+.wave-text:hover {
+  color: #ff5722; /* Change text color on hover */
+  transform: scale(1.05); /* Slightly enlarge the text when hovered */
+}
+/* Targetting the hand emoji */
+.wave-hand {
+  display: inline-block;
+  animation: wave 1s infinite;
+  transition: transform 0.3s ease, color 0.3s ease; /* Added transition to wave-hand */
+}
+
+/* Hover effect to change color of the wave emoji */
+.wave-hand:hover {
+  color: #ff5722; /* Change color of hand emoji on hover */
+  transform: scale(1.2); /* Slightly enlarge the hand emoji on hover */
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.col-right {
+  width: 35%;
+}
+
+.col-right img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 50px 0;
+  font-size: 24px;
+}
+
+/* Contact Form Section */
+#contact-form-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#contact-form-section .contact-left,
+#contact-form-section .form-container {
+  flex: 1;
+}
+
+#contact-form-section .contact-left img {
+  width: 100%;
+  max-width: 400px;
+  margin-left: 60px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#contact-form-section .form-container {
+  max-width: 45%;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between inputs and button */
+  height: 400px; /* Set a fixed height for the form */
+}
+
+#contact-form-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#contact-form-section .form-container h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#contact-form-section form .form-group {
+  margin-bottom: 20px;
+}
+
+#contact-form-section form input,
+#contact-form-section form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+#contact-form-section form input::placeholder,
+#contact-form-section form textarea::placeholder {
+  color: #811e81; /* Replace this with the color of your choice */
+  opacity: 1; /* Ensures the placeholder text is fully visible */
+  font-size: 18px;
+}
+
+
+#contact-form-section form button {
+  background-color: #00308f;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  align-self: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact-form-section form button:hover {
+  background-color: #524292;
+}
+
+#contact-form-section form .icon {
+  margin-left: 10px;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: transparent;
+}
+
+footer .social-media {
+  margin-bottom: 10px;
+}
+
+footer .social-media a {
+  margin: 0 15px;
+}
+
+footer .social-media img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+footer .social-media img:hover {
+  transform: scale(1.2);
+}
+
+footer p {
+  font-size: 20px;
+  color: #f4310f;
+}
+
+
+
