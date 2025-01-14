@@ -426,22 +426,26 @@ footer p {
   }
 
   /* Navigation Bar */
-  header .navigation-bar ul {
-    flex-direction: column; /* Stack links vertically */
-    align-items: center; /* Center align items */
-    gap: 1rem; /* Add spacing between links */
-  }
+  @media (max-width: 576px) {
+    header .navigation-bar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Adequate spacing */
+    }
 
-  header .navigation-bar ul li a {
-    font-size: 16px; /* Slightly smaller font size */
-    top: 0; /* Reset any upward positioning */
-  }
+    header .navigation-bar ul li a {
+        font-size: 16px;
+        top: 0; /* Reset positioning */
+        padding: 5px 10px; /* Add padding for better touch targets */
+    }
+}
 
   /* Main Content */
   .wave-text {
-    font-size: 20px; /* Adjust font size for better readability */
-    margin-bottom: 10px;
-  }
+        font-size: 18px; /* Smaller font */
+        margin-bottom: 15px; /* Slightly increased spacing */
+        line-height: 1.4; /* Better readability */
+    }
 
   .col-left h1 {
     font-size: 18px; /* Reduce heading size */
