@@ -545,3 +545,118 @@ footer p {
   color: #f4310f;
 }
 
+/* General Responsive Styles */
+@media (max-width: 1024px) {
+  /* For tablets and smaller laptops */
+  .container {
+    width: 90%;
+  }
+
+  header .navigation-bar ul {
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Reduce gap for smaller screens */
+  }
+
+  header .navigation-bar ul li a {
+    font-size: 20px; /* Slightly smaller font size */
+  }
+
+  .education-image-quote-content {
+    flex-direction: column; /* Stack the image and quote vertically */
+    text-align: center;
+  }
+
+  .education-quote {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For smartphones and smaller tablets */
+  header .logo {
+    font-size: 1.5rem;
+  }
+
+  header .navigation-bar ul {
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: center;
+  }
+
+  header .navigation-bar ul li {
+    margin: 10px 0; /* Add spacing between links */
+  }
+
+  header .navigation-bar ul li a {
+    font-size: 18px; /* Smaller font size for navigation links */
+  }
+
+  .education-image img {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .image-container {
+    width: 100%; /* Make the container fit smaller screens */
+  }
+
+  .overlay-image {
+    width: 80px; /* Adjust overlay size */
+  }
+
+  .education-quote blockquote {
+    font-size: 20px;
+  }
+
+  .education-quote footer {
+    font-size: 16px;
+  }
+
+  .vertical-line {
+    display: none; /* Hide vertical line on smaller screens */
+  }
+
+  .education-timeline {
+    padding: 20px 10px;
+  }
+
+  .education-item {
+    width: 100%; /* Full width for smaller screens */
+    text-align: center; /* Center-align text */
+    transform: none; /* Reset transform for better stacking */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For small smartphones */
+  body {
+    font-size: 14px; /* Adjust font size for readability */
+  }
+
+  header {
+    padding: 5px 0;
+  }
+
+  header .navigation-bar ul li a {
+    font-size: 16px;
+  }
+
+  .education-quote blockquote {
+    font-size: 18px;
+  }
+
+  .contact-left img {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .form-container {
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px; /* Smaller font size for inputs */
+  }
+
+  button {
+    font-size: 14px; /* Adjust button font size */
+  }
+}
