@@ -87,6 +87,8 @@ html {
 
 .columns-wrapper {
   justify-content: space-between;
+  display: flex;
+  flex-direction: row;
 }
 
 .wave-div {
